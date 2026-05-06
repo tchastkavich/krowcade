@@ -1,0 +1,67 @@
+<head>
+<meta charset="utf-8" />
+<title>Krow-Cade</title>
+<link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+<div class="left">
+    <img src="images/logo.png" id="logo">
+    
+    <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExNDBpcXF6MnF1NDFzdDBzdmM4bmZ0aDJoMWVkem44MTY2Y2Q5NnRwdyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/l4FGrHErakgV8GRO0/giphy.gif" id="kitty">
+
+    <img src="images/machine.png" id="machine">
+
+    <div id="select">
+        <h1 id="neonText">SELECT A GAME</h1>
+        <p class="p1">Purr-Paddle</p1>
+            <script>
+                const p1Elements = document.querySelectorAll('.p1');
+            
+                const audio = new Audio('/audio/meow.mp3');
+        
+                p1Elements.forEach(element => {
+                    element.addEventListener('click', () => {
+                        audio.currentTime = 0;
+                        audio.play(); 
+                        
+                        setTimeout(() => {
+                location.reload(); // Reload the page
+            }, 1000); // 1000 milliseconds = 1 second
+                    });
+                });
+            </script>
+
+        <br>
+        <p class="p2">Claw Machine</p2>
+        <br>
+        <p class="p2">Kitty Comet Crusade</p2>
+        <br>
+        <p class="p2">Cat Fight! </p2>
+            <script>
+                const p2Elements = document.querySelectorAll('.p2');
+                p2Elements.forEach(element => {
+                    element.dataset.originalText = element.innerText;
+
+                    element.addEventListener('mouseenter', function () {
+                        this.innerText = '[LOCKED]';
+                    });
+
+                    element.addEventListener('mouseleave', function () {
+                        this.innerText = this.dataset.originalText;
+                    });
+                });
+            </script>
+    </div>
+</div>
+
+<div class="game">
+    <canvas id="myCanvas" width=1000 height=800></canvas>
+</div>
+
+    <img id="cat" src="images/image.jpg" hidden>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

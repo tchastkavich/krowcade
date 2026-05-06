@@ -1,0 +1,126 @@
+@font-face {
+  font-family: 'Bondie';
+  src: url('/fonts/Bondie\ Demo\ Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+    
+    
+    .game {
+        background-color: #fcec93;
+        width: auto;
+        height: auto;
+        padding: 20px;
+        left: 800px;
+        top: 60px;
+        position: absolute;
+    }
+    
+    
+    #myCanvas {
+    border-style: solid;
+    border-color:#000;
+    z-index: 500;
+    }
+
+#logo{
+    height: 350px;
+    width: auto;
+    margin-top: 1%;
+    margin-left: 4%;
+}
+
+#machine{
+    height: 900px;
+    width: auto;
+    position: absolute;
+    bottom: -20%;
+    left: 4%;
+}
+
+#kitty{
+    height: 280px;
+    width: auto; 
+    z-index: 900;
+    position: absolute;
+    top: 9%;
+    left: 21.3%;
+    filter: brightness(102%) hue-rotate(101deg) saturate(200%) contrast(120%);
+}
+
+#select{
+ height: 298px;
+ width: 294px;
+ left: 11%;
+ top: 37%;
+ z-index: 1000;
+ position: absolute;
+ text-align: center;
+
+}
+
+  h1 {
+    font-size: 2rem;
+    animation: pulsate 2.5s infinite alternate;     
+    color: #ffe6f1;
+    font-family: Bondie, sans-serif;
+  }
+  
+  .p1 {
+    color: #ffadd2;
+    text-shadow: 0 0 9px #ffadd2;
+    padding-bottom: 3px;
+    font-size: 1.5rem;
+    font-family: Bondie, sans-serif;
+  }
+
+  .p1:hover{
+color: white;
+animation: pulsate 2.5s infinite alternate; 
+cursor: pointer;
+  }
+  
+  .p2 {
+    color: #9e607c;
+    text-shadow: 0 0 6px #ff9ecc;
+    padding-bottom: 3px;
+    font-size: 1.5rem;
+    font-family: Bondie, sans-serif;
+  }
+
+  .p2:hover{
+    cursor: pointer;
+      }
+
+  @keyframes pulsate {
+    100% {
+      /* Larger blur radius */
+      text-shadow:
+        0 0 4px #ffc7e1,
+        0 0 11px #ffc7e1,
+        0 0 19px #ffc7e1,
+        0 0 40px #ff9ecc,
+        0 0 80px #ff9ecc,
+        0 0 90px #ff9ecc,
+        0 0 100px #ff9ecc,
+        0 0 150px #ff9ecc;
+    }
+    0% {
+      /* Smaller blur radius */
+      text-shadow:
+        0 0 2px #ffc7e1,
+        0 0 4px #ffc7e1,
+        0 0 6px #ffc7e1,
+        0 0 10px #ff9ecc,
+        0 0 45px #ff9ecc,
+        0 0 55px #ff9ecc,
+        0 0 70px #ff9ecc,
+        0 0 80px #ff9ecc;
+    }
+  }
+
+    body {
+        background-color: black;
+        overflow: hidden;
+    }
+
